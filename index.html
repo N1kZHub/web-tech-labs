@@ -2,47 +2,218 @@
 <html lang="ru">
 <head>
     <meta charset="UTF-8">
-    <title>Главная</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>IT WEBSITE — разработка приложений</title>
     <link rel="stylesheet" href="src/assets/styles/style.css">
 </head>
 <body>
 
-    <header>
-        <img src="images/html-5.png" alt="Логотип" width="80">
-        <nav class="breadcrumbs">
-            <a href="index.html">Главная</a>
-        </nav>
-        <nav class="tab-menu">
+    <header class="site-header">
+        <a href="#" class="logo">IT WEBSITE</a>
+
+        <nav class="main-nav">
             <ul>
-                <li><a href="index.html">Главная</a></li>
-                <li><a href="contacts.html">Контакты</a></li>
+                <li><a href="#services">Services</a></li>
+                <li><a href="#media">Media</a></li>
+                <li><a href="#cases">Cases</a></li>
+                <li><a href="#faq">FAQ</a></li>
+                <li><a href="#contacts">Contacts</a></li>
             </ul>
         </nav>
+
+        <address class="header-contacts">
+            <a href="tel:+71111111111">+7 (111) 111 11 11</a>
+            <a href="mailto:info@company.ru">info@company.ru</a>
+        </address>
     </header>
 
-    <h1 class="main-title">Добро пожаловать</h1>
+    <main>
 
-    <p class="paragraph">Это сайт с иконкой HTML-5.</p>
+        <section class="main">
+            <h1>Development of mobile applications and web services of any complexity</h1>
+            <p>...</p>
 
-    <h3 class="section-title">О нас</h3>
-    <h4 class="subtitle">Давненько я не писал разметку...</h4>
-    <p class="paragraph">Короткий параграф слов для примера.</p>
+            <form class="callback-form">
+                <fieldset>
+                    <legend>Leave your contacts</legend>
+                    <label for="main-phone">Phone number</label>
+                    <input id="main-phone" type="tel" name="phone">
 
-    <h3 class="section-title">Услуги</h3>
-    <p class="paragraph">Ещё немного слов для заполнения сайта.</p>
+                    <label for="main-name">Full name</label>
+                    <input id="main-name" type="text" name="name">
 
-    <hr>
+                    <button type="submit">Get consultation</button>
+                </fieldset>
+            </form>
+        </section>
 
-    <footer>
-        <h3 class="section-title">Контакты</h3>
-        <p class="paragraph">Проще позвонить...</p>
         <hr>
-        <ul>
-            <li>Офис в центре города Чебоксары</li>
-            <li>+7 800 555 35 35</li>
-            <li>mail@example.com</li>
-        </ul>
-        <p class="paragraph">Все права защищены</p>
+
+        <section class="services" id="services">
+            <h2>Full development cycle</h2>
+            <p>We use proven technologies</p>
+
+            <article class="services-tech">
+                <h3>Web</h3>
+                <p>PHP...</p>
+
+                <h3>Mobile</h3>
+                <p>Swift...</p>
+            </article>
+
+            <aside class="services-list">
+                <h3>Наши услуги</h3>
+                <ul>
+                    <li>iOS development</li>
+                    <li>Android development</li>
+                    <li>Web development</li>
+                    <li>etc.</li>
+                </ul>
+            </aside>
+        </section>
+
+        <hr>
+
+        <section class="industries" id="media">
+            <h2>Developed more than 100 projects in 15 industries</h2>
+            <ul class="industries-list">
+                <li>Social media</li>
+                <li>Education</li>
+                <li>etc.</li>
+            </ul>
+        </section>
+
+        <hr>
+
+        <section class="projects" id="cases">
+            <h2>Projects we are proud of</h2>
+            <p>...</p>
+
+            <nav class="projects-tabs">
+                <ul>
+                    <li><a href="#">I-teka</a></li>
+                    <li><a href="#">Dauletten</a></li>
+                    <li><a href="#">etc.</a></li>
+                </ul>
+            </nav>
+
+            <article class="project-card">
+                <h3>I-teka</h3>
+                <p>...</p>
+
+                <figure>
+                    <img src="images/project-iteka.png">
+                </figure>
+                <p>
+                    <a href="#">App Store</a>
+                    <a href="#">Google Play</a>
+                </p>
+            </article>
+        </section>
+
+        <hr>
+
+        <section class="cta-discuss">
+            <h2>Let's discuss Your project</h2>
+            <p>...</p>
+
+            <form class="discuss-form">
+                <fieldset>
+                    <legend>Свяжитесь с нами</legend>
+
+                    <label for="discuss-phone">Best phone number</label>
+                    <input id="discuss-phone" type="tel" name="phone">
+
+                    <label for="discuss-name">Full name</label>
+                    <input id="discuss-name" type="text" name="name">
+
+                    <button type="submit">Discuss the project</button>
+                </fieldset>
+            </form>
+        </section>
+
+        <hr>
+
+        <section class="stages">
+            <h2>Application Development Stages</h2>
+
+            <article class="stage">
+                <h3>Analysis</h3>
+                <p>We write technical...</p>
+            </article>
+
+            <article class="stage">
+                <h3>Design</h3>
+                <p>We adapt...</p>
+            </article>
+
+        </section>
+
+        <hr>
+
+        <section class="team">
+            <h2>Our team</h2>
+            <p>...</p>
+
+            <ul class="team-stats">
+                <li><strong>7 years</strong> in IT sphere</li>
+            </ul>
+
+            <p>...</p>
+
+            <figure>
+                <img src="images/team.png">
+            </figure>
+        </section>
+
+        <hr>
+
+        <section class="get-book">
+            <h2>Get the book for free by leaving your contacts</h2>
+
+            <form class="book-form">
+                <fieldset>
+                    <legend>Оставьте контакты</legend>
+
+                    <label for="book-phone">Phone number</label>
+                    <input id="book-phone" type="tel" name="phone">
+
+                    <button type="submit">Send me ebook to my mail</button>
+                </fieldset>
+            </form>
+
+            <figure>
+                <img src="images/book.png">
+            </figure>
+        </section>
+
+        <hr>
+
+        <section class="faq" id="faq">
+            <h2>FAQ</h2>
+
+            <article class="faq-item">
+                <h3>What is...</h3>
+                <p>Development...</p>
+            </article>
+
+            <article class="faq-item">
+                <h3>How long...</h3>
+                <p>Average...</p>
+            </article>
+        </section>
+
+    </main>
+
+    <footer class="site-footer" id="contacts">
+        <h2>IT WEBSITE</h2>
+
+        <address>
+            <p>Contact name: <a href="tel:+77777777777">+7 (777) 777 77 77</a></p>
+            <p>Post: <a href="mailto:mail@mail.com">mail@mail.com</a></p>
+        </address>
+
+        <p>...</p>
     </footer>
 
 </body>
