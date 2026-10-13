@@ -1,10 +1,18 @@
 <!DOCTYPE html>
 <html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <title>Главная</title>
+    <link rel="stylesheet" href="src/assets/styles/style.css">
+</head>
 <body>
 
     <header>
         <img src="images/html-5.png" alt="Логотип" width="80">
-        <nav>
+        <nav class="breadcrumbs">
+            <a href="index.html">Главная</a>
+        </nav>
+        <nav class="tab-menu">
             <ul>
                 <li><a href="index.html">Главная</a></li>
                 <li><a href="contacts.html">Контакты</a></li>
@@ -12,26 +20,30 @@
         </nav>
     </header>
 
-<h1>Добро пожаловать</h1>
-<p>Это сайт с иконкой HTML-5.</p>
-<h3>О нас</h3>
-<h4>Давненько я не писал разметку...</h4>
-<p>Короткий параграф слов для примера.</p>
-<h3>Услуги</h3>
-<p>Ещё немного слов для заполнения сайта.</p>
-<hr>
+    <h1 class="main-title">Добро пожаловать</h1>
 
-<footer>
-    <h3>Контакты</h3>
-    <p>Проще позвонить...</p>
+    <p class="paragraph">Это сайт с иконкой HTML-5.</p>
+
+    <h3 class="section-title">О нас</h3>
+    <h4 class="subtitle">Давненько я не писал разметку...</h4>
+    <p class="paragraph">Короткий параграф слов для примера.</p>
+
+    <h3 class="section-title">Услуги</h3>
+    <p class="paragraph">Ещё немного слов для заполнения сайта.</p>
+
     <hr>
-    <ul>
-        <li>Офис в центре города Чебоксары</li>
-        <li>+7 800 555 35 35</li>
-        <li>mail@example.com</li>
-    </ul>
-    <p>Все права защищены</p>
-</footer>
+
+    <footer>
+        <h3 class="section-title">Контакты</h3>
+        <p class="paragraph">Проще позвонить...</p>
+        <hr>
+        <ul>
+            <li>Офис в центре города Чебоксары</li>
+            <li>+7 800 555 35 35</li>
+            <li>mail@example.com</li>
+        </ul>
+        <p class="paragraph">Все права защищены</p>
+    </footer>
 
 </body>
 </html>

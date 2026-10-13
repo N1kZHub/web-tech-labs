@@ -1,10 +1,20 @@
 <!DOCTYPE html>
 <html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <title>Контакты</title>
+    <link rel="stylesheet" href="src/assets/styles/style.css">
+</head>
 <body>
 
     <header>
         <img src="images/html-5.png" alt="Логотип" width="80">
-        <nav>
+        <nav class="breadcrumbs">
+            <a href="index.html">Главная</a>
+            <span>/</span>
+            <a href="contacts.html">Контакты</a>
+        </nav>
+        <nav class="tab-menu">
             <ul>
                 <li><a href="index.html">Главная</a></li>
                 <li><a href="contacts.html">Контакты</a></li>
@@ -12,44 +22,45 @@
         </nav>
     </header>
 
-<h2>Contact Us</h2>
-<p>По всем вопросам ответим. А по остальным не ответим.</p>
-<img src="images/cat.jpg" alt="Фото" width="350">
+    <h2 class="contact-title">Contact Us</h2>
+    <p class="paragraph">По всем вопросам ответим. А по остальным не ответим.</p>
 
-<h4>Address</h4>
-<p>Чебоксары</p>
+    <img src="images/cat.jpg" alt="Фото" width="350">
 
-<h4>Phone</h4>
-<ul>
-    <li>+7 800 555 35 35</li>
-    <li>+7 800 555 35 36</li>
-</ul>
+    <h4 class="subtitle">Address</h4>
+    <p class="paragraph">Чебоксары</p>
 
-<h4>Online service</h4>
-<ul>
-    <li><a href="https://example.com">example.com</a></li>
-    <li><a href="mailto:mail@example.com">mail@example.com</a></li>
-</ul>
-
-<h4>Send us message</h4>
-<form>
-    <label>Full Name <input type="text" name="name"></label><br>
-    <label>Email <input type="email" name="email"></label><br>
-    <label>Message <textarea name="message"></textarea></label><br>
-    <button type="submit">submit</button>
-</form>
- 
-<footer>
-    <h3>Контакты</h3>
-    <p>Проще позвонить...</p>
-    <hr>
+    <h4 class="subtitle">Phone</h4>
     <ul>
-        <li>Офис в центре города Чебоксары</li>
         <li>+7 800 555 35 35</li>
-        <li>mail@example.com</li>
+        <li>+7 800 555 35 36</li>
     </ul>
-    <p>Все права защищены</p>
-</footer>
+
+    <h4 class="subtitle">Online service</h4>
+    <ul>
+        <li><a href="https://example.com">example.com</a></li>
+        <li><a href="mailto:mail@example.com">mail@example.com</a></li>
+    </ul>
+
+    <h4 class="subtitle">Send us message</h4>
+    <form class="contact-form">
+        <label>Full Name <input type="text" name="name" class="input-field"></label><br>
+        <label>Email <input type="email" name="email" class="input-field"></label><br>
+        <label>Message <textarea name="message" class="input-field"></textarea></label><br>
+        <button type="submit" class="submit-btn">submit</button>
+    </form>
+
+    <footer>
+        <h3 class="section-title">Контакты</h3>
+        <p class="paragraph">Проще позвонить...</p>
+        <hr>
+        <ul>
+            <li>Офис в центре города Чебоксары</li>
+            <li>+7 800 555 35 35</li>
+            <li>mail@example.com</li>
+        </ul>
+        <p class="paragraph">Все права защищены</p>
+    </footer>
 
 </body>
-</html>    
+</html>
