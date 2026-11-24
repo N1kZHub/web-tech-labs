@@ -6,12 +6,19 @@
     <title>IT WEBSITE — разработка приложений</title>
     <link rel="stylesheet" href="src/assets/styles/style.css">
 </head>
-<body>
+<body class="home-page">
 
     <header class="site-header">
+        <button class="menu-toggle" type="button"
+                aria-label="Открыть меню"
+                aria-expanded="false"
+                aria-controls="site-menu">
+            ☰
+        </button>
+
         <a href="#" class="logo">IT WEBSITE</a>
 
-        <nav class="main-nav">
+        <nav class="main-nav" id="site-menu">
             <ul>
                 <li><a href="#services">Services</a></li>
                 <li><a href="#media">Media</a></li>
@@ -30,36 +37,56 @@
     <main>
 
         <section class="main">
-            <h1>Development of mobile applications and web services of any complexity</h1>
-            <p>...</p>
+            <div class="hero-content">
+                <h1>
+                    Development of <span>mobile applications</span> and
+                    <span>web services</span> of any complexity
+                </h1>
 
-            <form class="callback-form">
-                <fieldset>
-                    <legend>Leave your contacts</legend>
-                    <label for="main-phone">Phone number</label>
-                    <input id="main-phone" type="tel" name="phone">
+                <p>
+                    We create mobile applications for iOS and Android that bring
+                    your business to your customers' mobile devices.
+                </p>
+            </div>
+            <img class="hero-image" src="images/hero-phones.png"
+                 alt="Примеры экранов мобильных приложений">
 
-                    <label for="main-name">Full name</label>
-                    <input id="main-name" type="text" name="name">
+            <form class="callback-form" aria-labelledby="callback-title">
+                <h2 id="callback-title">
+                    Leave your contacts and we will call you back within 30 minutes
+                </h2>
+
+                <div class="callback-fields">
+                    <label for="main-phone">
+                        Phone number
+                        <input id="main-phone" type="tel" name="phone">
+                    </label>
+
+                    <label for="main-name">
+                        Full name
+                        <input id="main-name" type="text" name="name">
+                    </label>
 
                     <button type="submit">Get consultation</button>
-                </fieldset>
+                </div>
             </form>
         </section>
 
         <hr>
 
         <section class="services" id="services">
-            <h2>Full development cycle</h2>
-            <p>We use proven technologies</p>
+            <div class="services-content">
+                <h2>Full development cycle</h2>
+                <p>We use proven technologies</p>
 
-            <article class="services-tech">
-                <h3>Web</h3>
-                <p>PHP...</p>
+                <article class="services-tech">
+                    <h3>Web</h3>
+                    <p>PHP...</p>
 
-                <h3>Mobile</h3>
-                <p>Swift...</p>
-            </article>
+                    <h3>Mobile</h3>
+                    <p>Swift...</p>
+                </article>
+            </div>
 
             <aside class="services-list">
                 <h3>Наши услуги</h3>
@@ -216,5 +243,37 @@
         <p>...</p>
     </footer>
 
+    <script>
+        const menuButton = document.querySelector(".menu-toggle");
+        const siteMenu = document.querySelector("#site-menu");
+
+        function setMenuOpen(isOpen) {
+            menuButton.setAttribute("aria-expanded", String(isOpen));
+            menuButton.setAttribute(
+                "aria-label",
+                isOpen ? "Закрыть меню" : "Открыть меню"
+            );
+            menuButton.textContent = isOpen ? "×" : "☰";
+        }
+
+        menuButton.addEventListener("click", () => {
+            const isOpen = menuButton.getAttribute("aria-expanded") === "true";
+            setMenuOpen(!isOpen);
+        });
+
+        siteMenu.addEventListener("click", (event) => {
+            if (event.target.closest("a")) {
+                setMenuOpen(false);
+            }
+        });
+
+        document.addEventListener("keydown", (event) => {
+            if (event.key === "Escape" &&
+                menuButton.getAttribute("aria-expanded") === "true") {
+                setMenuOpen(false);
+                menuButton.focus();
+            }
+        });
+    </script>
 </body>
 </html>
