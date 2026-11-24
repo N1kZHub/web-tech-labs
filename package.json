@@ -1,0 +1,25 @@
+{
+  "name": "web-technologies-2024",
+  "version": "1.0.0",
+  "description": "Репозиторий для WebИС-ЛБ-ПИ-20",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "build:css": "sass --no-source-map --no-error-css src/assets/styles/style.scss src/assets/styles/style.css"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/N1kZHub/web-tech-labs.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "type": "commonjs",
+  "bugs": {
+    "url": "https://github.com/N1kZHub/web-tech-labs/issues"
+  },
+  "homepage": "https://github.com/N1kZHub/web-tech-labs#readme",
+  "devDependencies": {
+    "sass": "^1.108.2"
+  }
+}
